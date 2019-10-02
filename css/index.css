@@ -1,0 +1,19 @@
+header .logo {
+    display: flex;
+}
+
+header img{
+    max-height: 50px;
+    max-width: 50ph;
+}
+
+header nav .menu{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav .menu a {
+    text-decoration: none;
+}
