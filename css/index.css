@@ -1,5 +1,6 @@
 header .logo {
     display: flex;
+    justify-content: center;
 }
 
 header img{
@@ -10,10 +11,17 @@ header img{
 header nav .menu{
     display: flex;
     justify-content: space-around;
+    align-content: center;
     padding: 0;
     list-style-type: none;
 }
 
+header nav .menu a:hover{
+    background-color: rgb(212, 212, 212);
+}
+
 header nav .menu a {
     text-decoration: none;
+    border: 1px solid;
+    color: black;
 }
