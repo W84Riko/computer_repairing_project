@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap');
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header h1{
+    font-family: 'Mansalva', cursive;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 header .logo {
     display: flex;
     justify-content: center;
@@ -5,8 +19,9 @@ header .logo {
 
 header img{
     max-height: 50px;
-    max-width: 50ph;
-}
+    max-width: 50px;
+    margin-top: 10px;
+    }
 
 header nav .menu{
     display: flex;
@@ -16,12 +31,96 @@ header nav .menu{
     list-style-type: none;
 }
 
-header nav .menu a:hover{
-    background-color: rgb(212, 212, 212);
+header nav .menu li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    margin-left: 5px;
+    margin-right: 5ps;
 }
 
-header nav .menu a {
-    text-decoration: none;
-    border: 1px solid;
-    color: black;
+@media (max-width: 400px) {
+    header nav {
+        font-size: 12px;
+    }
+}
+
+header nav .menu li a:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+}
+
+#home .bg-image{
+    background-image: url("../img/notebook.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+#home h2 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Mansalva', cursive;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.darkblue-section {
+    background-color: rgba(61, 139, 247, 0.6);
+}
+
+.slightly-darkblue-section {
+    background-color: rgba(61, 139, 247, 0.4);
+    text-align: right;
+}
+
+#services h2, #services h3, #services p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#services p {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Mansalva', cursive;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: 'Mansalva', cursive;
+}
+
+#partners .carousel {
+    display: flex;
+    justify-content: space-around;
+}
+
+#partners .carousel button {
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 100px;
+}
+
+#partners .carousel .left-btn {
+    background: url(../img/left-arrow.jpg) no-repeat;
+}
+
+#partners .carousel .right-btn {
+    background: url(../img/right-arrow.jpg) no-repeat;
+}
+#partners .carousel img {
+    max-width: 50px;
+    max-height: 50px;
 }
