@@ -124,3 +124,22 @@ h3 {
     max-width: 50px;
     max-height: 50px;
 }
+
+#request form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#request form .multy-row-input {
+    height: 100px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#request form .text-input {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
