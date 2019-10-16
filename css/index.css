@@ -163,13 +163,13 @@ h3 {
 @media(min-width: 330px) {
     .contacts-list {
         display: grid;
-        grid-template-columns: 1fr, 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 5px;
     }
 }
 
 @media(min-width: 640px) {
     .contacts-list {
-        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
