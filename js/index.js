@@ -6,18 +6,21 @@ function submitClicked() {
     const phoneNumberInput =  document.forms["myForm"]["phoneNumberInput"].value;
     const instrumentInput =  document.forms["myForm"]["instrumentInput"].value;
     const requirement =  /^\d[\d\(\)\ -]{4,14}\d$/;
+    let errorString = '';
     if(nameInput == '') {
-        window.showAlert("Введіть ім'я", false);
+        errorString += " Введіть ім'я!";
     }
     if(phoneNumberInput == '') {
-        window.showAlert("Введіть номер телефону", false);
+       errorString += " Введіть номер телефону!";
     }
     if(instrumentInput == '') {
-       window.showAlert("Введіть прилад, який потрібно полагодити", false);
+       errorString += " Введіть прилад, який потрібно полагодити!";
     }
-    if(!requirement.test(phoneNumberInput))
-    {
-        window.showAlert("Неправильно введений номер телефона", false);
+    if(!requirement.test(phoneNumberInput)){
+       errorString += " Неправильно введений номер телефону!";
+    }
+    if(errorString != '') {
+        window.showAlert(errorString, false);
     }
 }
 
