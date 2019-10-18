@@ -7,16 +7,30 @@ function submitClicked() {
     const instrumentInput =  document.forms["myForm"]["instrumentInput"].value;
     const requirement =  /^\d[\d\(\)\ -]{4,14}\d$/;
     if(nameInput == '') {
-        alert("Введіть ім'я");
+        window.showAlert("Введіть ім'я", false);
     }
     if(phoneNumberInput == '') {
-        alert("Введіть номер телефону");
+        window.showAlert("Введіть номер телефону", false);
     }
     if(instrumentInput == '') {
-        alert("Введіть прилад, який потрібно полагодити");
+       window.showAlert("Введіть прилад, який потрібно полагодити", false);
     }
     if(!requirement.test(phoneNumberInput))
     {
-        alert("Неправильно введений номер телефона");
+        window.showAlert("Неправильно введений номер телефона", false);
     }
+}
+
+
+function showAlert(message, success = true) {
+  const alertTemplate = `<div class="alert alert-dismissible ${
+    success ? 'alert-success' : 'alert-danger'
+  }" role="alert">
+          <strong>${message}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+          </button>
+        </div>`;
+  const alertElement = $('body').append(alertTemplate);
+  alertElement.alert();
 }
