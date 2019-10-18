@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <title>Ремонт комп'ютерної техніки</title>
 </head>
@@ -24,8 +25,8 @@
         </nav>
     </header>
     <section id="home">
-        <div class="bg-image"></div>
-        <h2>Ремонт комп'ютерної техніки</h2>
+        <div class="bg-image"><h2>Ремонт комп'ютерної техніки</h2></div>
+
     </section>
     <section id="services">
         <section class="darkblue-section">
@@ -46,60 +47,61 @@
     </section>
     <section id="partners">
         <h2>Компанії постачальники</h2>
-        <div class="carousel">
-            <button class="left-btn"></button>
-            <img src="img/intel.jpg" alt="Intel">
-            <img src="img/asus.jpg" alt="Asus">
-            <img src="img/lenovo.png" alt="Lenovo">
-            <button class="right-btn"></button>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="img/intel.jpg"  alt="Intel">
+                </div>
+                <div class="carousel-item">
+                <img src="img/asus.jpg"  alt="Asus">
+                </div>
+                <div class="carousel-item">
+                <img src="img/lenovo.png"  alt="Lenovo">
+                </div>
+            </div>
         </div>
     </section>
     <section id="request">
         <h2>Заявка на ремонт</h2>
-        <form>
-            <input type="text" class="text-input" placeholder="Ім'я">
-            <input type="text" class="text-input" placeholder="Номер телефону">
-            <input type="text" class="text-input" placeholder="Прилад">
+        <form name="myForm">
+            <input type="text" name="nameInput" class="text-input" placeholder="Ім'я">
+            <input type="text" name="phoneNumberInput" class="text-input" placeholder="Номер телефону">
+            <input type="text" name="instrumentInput" class="text-input" placeholder="Прилад">
             <textarea class="multy-row-input" placeholder="Деталі поломки"></textarea>
-            <input type="submit" value="Надіслати заявку">
+            <input type="submit" id="submitButton" class="btn btn-primary" value="Надіслати заявку">
         </form>
     </section>
     <section  id="contacts">
         <h2>Контакти</h2>
         <div class="contacts-list">
             <article class="contact">
-                <img src="img/location.jpg" alt="Адреса">
+                <img src="img/address-icon.png" alt="Адреса">
                 <p>Адреса:</p>
                 <p>м. Львів,</p>
                 <p>вул. Степана Бандери, 21</p>
             </article>
             <article class="contact">
-                <img src="img/hour.jpg" alt="Годинник">
+                <img src="img/clock.png" alt="Годинник">
                 <p>Години роботи:</p>
                 <p>ПН. - ПТ.</p>
                 <p>9:00 - 18:00</p>
             </article>
             <article class="contact">
-                <img src="img/phone.jpg" alt="Телефон">
+                <img src="img/phone.png" alt="Телефон">
                 <p>Телефон:</p>
                 <p>(032)-123-45-67</p>
                 <p>(067)-987-65-43</p>
             </article>
             <article class="contact">
-                <img src="img/email.jpg" alt="Email">
+                <img src="img/email.png" alt="Email">
                 <p>Email:</p>
                 <p>random@gmail.com</p>
             </article>
         </div>
     </section>
-
-
-
-
-
-<!--Наявна проблема з dislay: grid. Я не можу налаштувати так, щоб контакти при 330> і 640> px розташовувались відповідно по 2 і 4 контакти в ряд.-->
-<!--Чому не працює display grid для контактів? -->
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
