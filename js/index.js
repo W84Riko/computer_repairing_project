@@ -37,3 +37,21 @@ function showAlert(message, success = true) {
   const alertElement = $('body').append(alertTemplate);
   alertElement.alert();
 }
+
+const themeSelect = document.querySelector('#theme').addEventListener("change", changeTheme);
+
+function changeTheme() {
+    const selectedIndex = document.querySelector('#theme').selectedIndex;
+    const body = document.querySelector('body');
+    const header = document.querySelector('header');
+    if(selectedIndex == 0) {
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+        header.style.backgroundColor = "white";
+    }
+    else {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        header.style.backgroundColor = "#00bc8c";
+    }
+}

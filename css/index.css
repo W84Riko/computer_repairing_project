@@ -162,3 +162,17 @@ h3 {
     left: 25%;
     z-index: 1051;
 }
+
+.carousel-inner img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.carousel-control-next {
+    background-color: black;
+}
+
+.carousel-control-prev {
+    background-color: black;
+}
