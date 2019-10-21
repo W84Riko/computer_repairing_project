@@ -43,10 +43,14 @@ const themeSelect = document.querySelector('#theme').addEventListener("change", 
 function changeTheme() {
     const selectedIndex = document.querySelector('#theme').selectedIndex;
     const body = document.querySelector('body');
-    const header = document.querySelector('header');
     switch(selectedIndex) {
-        case 1: document.querySelector('#bootstrapLink').href = "css/bootstrap1.min.css"; break;
-        case 2: document.querySelector('#bootstrapLink').href = "css/bootstrap2.min.css"; break;
-        default : document.querySelector('#bootstrapLink').href = "css/bootstrap.min.css";
+        case 1:
+            document.querySelector('#bootstrapLink').href = "css/bootstrap1.min.css";
+            break;
+        case 2:
+            document.querySelector('#bootstrapLink').href = "css/bootstrap2.min.css";
+            break;
+        default :
+            document.querySelector('#bootstrapLink').href = "css/bootstrap.min.css";
     }
 }
