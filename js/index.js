@@ -44,14 +44,9 @@ function changeTheme() {
     const selectedIndex = document.querySelector('#theme').selectedIndex;
     const body = document.querySelector('body');
     const header = document.querySelector('header');
-    if(selectedIndex == 0) {
-        body.style.backgroundColor = "white";
-        body.style.color = "black";
-        header.style.backgroundColor = "white";
-    }
-    else {
-        body.style.backgroundColor = "black";
-        body.style.color = "white";
-        header.style.backgroundColor = "#00bc8c";
+    switch(selectedIndex) {
+        case 1: document.querySelector('#bootstrapLink').href = "css/bootstrap1.min.css"; break;
+        case 2: document.querySelector('#bootstrapLink').href = "css/bootstrap2.min.css"; break;
+        default : document.querySelector('#bootstrapLink').href = "css/bootstrap.min.css";
     }
 }
