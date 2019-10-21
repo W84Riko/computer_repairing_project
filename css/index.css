@@ -40,9 +40,9 @@ header nav .menu li a {
     margin-right: 5px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     header nav {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
